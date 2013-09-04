@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * Git Browser for GitLab
+ * Git Browser for GitList
  */
 public class GitList extends GitRepositoryBrowser {
 
@@ -38,7 +38,7 @@ public class GitList extends GitRepositoryBrowser {
      *
      * http://[GitList URL]/commit/a9182a07750c9a0dfd89a8461adf72ef5ef0885b
      *
-     * @param path
+     * @param path affected file path
      * @return diff link
      * @throws IOException
      */
@@ -67,8 +67,8 @@ public class GitList extends GitRepositoryBrowser {
     /**
      * Return a diff link regardless of the edit type by appending the index of the pathname in the changeset.
      *
-     * @param path
-     * @return
+     * @param path affected file path
+     * @return diff link
      * @throws IOException
      */
     private URL getDiffLinkRegardlessOfEditType(Path path) throws IOException {
