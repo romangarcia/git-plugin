@@ -13,6 +13,8 @@ import org.kohsuke.stapler.StaplerRequest;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Git Browser for GitLab
@@ -23,7 +25,7 @@ public class GitList extends GitRepositoryBrowser {
     private final URL url;
 
     @DataBoundConstructor
-    public GitLab(String url) throws MalformedURLException {
+    public GitList(String url) throws MalformedURLException {
         this.url = normalizeToEndWithSlash(new URL(url));
     }
 
